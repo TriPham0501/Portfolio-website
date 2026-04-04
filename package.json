@@ -50,7 +50,6 @@
     "tailwindcss": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
   },
   "dependencies": {
-    "@emotion/styled": "^11.14.1",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
