@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "amd",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "outDir": "./dist/"
+  },
+  "types": [
+    "arcgis-js-api",
+    "moment"
+  ],
+  "include": [
+    "src/*"
+  ],
+  "extends": "./node_modules/@sentry/typescript/tsconfig.json"
+}

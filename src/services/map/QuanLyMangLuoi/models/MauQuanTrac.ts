@@ -1,0 +1,27 @@
+export default interface MauQuanTrac {
+  OBJECTID?: string;
+  ChiSoPecmanganate?: number,
+  CloDu?: number,
+  Cloliform?: number,
+  Clorua?: number,
+  DoCung?: number,
+  DoDuc?: number,
+  DoMau?: number,
+  E_Coli?: number,
+  GhiChu?: string,
+  IDDiemDanhGia?: string,
+  IDMauKiemNghiem?: string,
+  Mangan?: number,
+  Mui?: number,
+  NgayCapNhat?: number,
+  NgayNhanMau?: number,
+  NguoiLayMau?: string,
+  Nitrat?: number,
+  Nitrit?: number,
+  PH?: number,
+  Sat?: number,
+  Sunphat?: number,
+  TenMau?: string,
+  ThoiGianThuNghiem?: number,
+  TinhTrangMau?: string
+}
