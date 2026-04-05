@@ -1,5 +1,5 @@
 import { UserResponse } from '../services/main/model';
-import * as decode from 'jwt-decode';
+import decode from 'jwt-decode';
 const ITEM_NAME = {
   user: 'user',
   token: 'token'
