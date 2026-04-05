@@ -72,8 +72,8 @@ export const timelineData: TimelineYear[] = [
         textColor: 'text-gray-800'
       },
       {
-        title: 'Achieved TOEIC 775 (LR), 245 (SW)',
-        description: '',
+        title: 'TOEIC Achievement',
+        description: '775 (L/R), 245 (S/W)',
         bgColor: 'bg-amber-200',
         textColor: 'text-gray-800'
       }

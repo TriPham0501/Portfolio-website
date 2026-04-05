@@ -1,5 +1,5 @@
 const ArcGISPlugin = require("@arcgis/webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const SWPrecache = require("sw-precache-webpack-plugin");
@@ -39,13 +39,16 @@ module.exports = (env) => {
       SERVICE_URL: JSON.stringify(isProd && "/api"),
       VERSION: JSON.stringify("2.1"),
     }),
-    new CleanWebpackPlugin(["dist"]),
-    new CopyWebpackPlugin([
-      {
-        context: "./src/static/",
-        from: "**/*.*",
-      },
-    ]),
+    new CleanWebpackPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          context: path.resolve(__dirname, "src/static"),
+          from: "**/*.*",
+          to: path.resolve(__dirname, "dist"),
+        },
+      ],
+    }),
     new ArcGISPlugin({
       locales: ["vi"],
     }),
@@ -67,6 +70,7 @@ module.exports = (env) => {
     output: {
       filename: "[name].[hash].js",
       publicPath: "/",
+      hashFunction: "sha256",
     },
     module: {
       rules: [
@@ -95,7 +99,7 @@ module.exports = (env) => {
             process.env.NODE_ENV !== "production"
               ? "style-loader"
               : MiniCssExtractPlugin.loader,
-            "css-loader",
+            { loader: "css-loader", options: { url: false } },
             "postcss-loader",
           ],
         },
