@@ -48,8 +48,9 @@
   "license": "Apache-2.0",
   "scripts": {
 
-    "start": "webpack serve --mode development --open",
-    "build": "webpack --mode production",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+
     "build:css": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css",
     "tailwindcss": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
   },

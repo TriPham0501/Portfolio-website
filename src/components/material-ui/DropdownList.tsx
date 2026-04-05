@@ -11,10 +11,10 @@ const Example = () => {
   );
 };
 
-const FlyoutLink = ({ children, href, FlyoutContent }) => {
+export const FlyoutLink = ({ children, href, FlyoutContent, anchorClassName = "" }: { children: React.ReactNode; href: string; FlyoutContent: React.FC; anchorClassName?: string }) => {
   const [open, setOpen] = useState(false);
 
-  const showFlyout = FlyoutContent && open;
+  const showFlyout = open;
 
   return (
     <div
@@ -22,7 +22,7 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
       onMouseLeave={() => setOpen(false)}
       className="relative w-fit h-fit"
     >
-      <a href={href} className="relative text-white">
+      <a href={href} className={`relative text-white ${anchorClassName}`}>
         {children}
         <span
           style={{
@@ -32,7 +32,7 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
         />
       </a>
       {/* <AnimatePresence> */}
-        <AnimatedFlyout isVisible={showFlyout} className="absolute left-1/2 top-12 bg-white text-black">
+        <AnimatedFlyout isVisible={showFlyout} className="absolute left-1/2 top-12">
           <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent" />
           <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />
           <FlyoutContent />
@@ -51,6 +51,7 @@ const AnimatedFlyout = ({ isVisible, className, children }: { isVisible: boolean
   );
 
   useEffect(() => {
+    let timer: ReturnType<typeof setTimeout>;
     if (isVisible) {
       setShouldRender(true);
       requestAnimationFrame(() => {
@@ -60,9 +61,9 @@ const AnimatedFlyout = ({ isVisible, className, children }: { isVisible: boolean
       });
     } else {
       setAnimStyle({ opacity: 0, transform: "translateX(-50%) translateY(15px)" });
-      const timer = setTimeout(() => setShouldRender(false), 300);
-      return () => clearTimeout(timer);
+      timer = setTimeout(() => setShouldRender(false), 300);
     }
+    return () => clearTimeout(timer);
   }, [isVisible]);
 
   if (!shouldRender) return null;

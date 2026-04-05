@@ -107,8 +107,8 @@ const ProjectSection: React.FC = () => {
   return (
     <section
       id="projects"
-      className="relative py-20 text-white bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/assets/images/wp2.jpg')" }}
+      className="relative flex flex-col justify-center py-20 text-white bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/assets/images/wp2.jpg')", minHeight: '100vh' }}
     >
       <div className="absolute inset-0 bg-black/65" />
 
