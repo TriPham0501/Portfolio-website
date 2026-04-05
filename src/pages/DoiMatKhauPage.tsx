@@ -1,3 +1,4 @@
+// @ts-ignore
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { RouteComponentProps, withRouter } from 'react-router';
