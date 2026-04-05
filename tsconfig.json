@@ -8,6 +8,10 @@
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "noEmit": false,
+    "esModuleInterop": true,
+    "isolatedModules": true,
     "importHelpers": true,
     "target": "es2015",
     "typeRoots": [
