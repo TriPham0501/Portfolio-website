@@ -1,4 +1,4 @@
-import "./modules/mapConfig";
+// import "./modules/mapConfig";
 
 // React
 import { createTheme, ThemeProvider } from "@mui/material/styles";
