@@ -47,8 +47,10 @@
   },
   "license": "Apache-2.0",
   "scripts": {
-    "start": "set NODE_OPTIONS=--openssl-legacy-provider && webpack serve --mode development --open",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --mode production --max-old-space-size=4096",
+    // "start": "set NODE_OPTIONS=--openssl-legacy-provider && webpack serve --mode development --open",
+    // "build": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --mode production --max-old-space-size=4096",
+    "start": "webpack serve --mode development --open",
+    "build": "webpack --mode production --max-old-space-size=4096",
     "build:css": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css",
     "tailwindcss": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
   },

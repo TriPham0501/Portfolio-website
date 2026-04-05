@@ -8,10 +8,10 @@ const PageBanner = () => {
   const [isLogoHovered, setIsLogoHovered] = useState(false);
 
   const options = [
-    ["Home", "#home"],
+    ["Home", "/home"],
     ["Journey", "#about"],
     ["Achievements", "#games"],
-    ["Projects", "#missions"],
+    ["Projects", "/projects"],
     ["Relationships", "#contact"],
   ];
 

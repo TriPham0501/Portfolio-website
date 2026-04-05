@@ -8,6 +8,7 @@ import AboutSection from './components/AboutSection';
 import TechnologySection from './components/TechnologySection';
 import JourneySection from './components/JourneySection';
 import ConnectionSection from './components/ConnectionSection';
+import ProjectSection from './components/ProjectSection';
 
 const styles = createStyles({
   root: {
@@ -35,7 +36,6 @@ const homePageRootStyle: React.CSSProperties = {
 type States = {
   isLoadLayers: boolean // kiểm tra đã tải lớp dữ liệu?
   , isShowLayerListSelect: boolean,
-  quanTracGraphic: __esri.Graphic | null,
   layerIds: string[] // layer được phép hiển thị
 };
 
@@ -59,6 +59,8 @@ class HomePage extends BasePage<Props, States> {
 
           <TechnologySection />
           <JourneySection />
+          <ProjectSection />
+          
           {/* <ConnectionSection /> */}
         </div>
       </div>

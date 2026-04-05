@@ -5,6 +5,7 @@ import { APPLICATION } from '../constants/app.constant';
 // const  QuanLySanLuongKhachHangPage = React.lazy(()=>import('../pages/QuanLySanLuongKhachHangPage'));
 // const  TNSCPage = React.lazy(()=>import('../pages/TNSCPage'));
 const HomePage = React.lazy(() => import('../pages/HomePage/HomePage'));
+const ProjectPage = React.lazy(() => import('../pages/ProjectPage'));
 
 
 
@@ -38,6 +39,11 @@ const routes: Array<Route> = [
     id: APPLICATION.Home, name: 'Home', component: HomePage,
     props: { path: '/home' },
     avatar: '/images/icons/tnsc.png', isPrivate:true
+  },
+  {
+    id: 'projects', name: 'Projects', component: ProjectPage,
+    props: { path: '/projects' },
+    isPrivate: false
   }
 
   
