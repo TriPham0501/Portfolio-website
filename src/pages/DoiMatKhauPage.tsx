@@ -2,6 +2,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { RouteComponentProps, withRouter } from 'react-router';
+
 import { alertActions, updatePassword } from '../services/main/action';
 import Header from '../components/Header/LoginHeader';
 import ChangePasswordComponent from '../components/ChangePasswordComponent';
