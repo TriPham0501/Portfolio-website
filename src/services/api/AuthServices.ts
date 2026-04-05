@@ -54,7 +54,7 @@ async function getAppInfo(id: string, isAnonymous = false): Promise<ApplicationI
     }
     return result;
   } catch (error) {
-    return Promise.reject(error.message);
+    // return Promise.reject(error.message);
   }
 }
 
@@ -66,7 +66,7 @@ export async function getCapabilities(): Promise<string[]> {
     var response = await get(url);
     return response.data;
   } catch (error) {
-    return Promise.reject(error.message);
+    // return Promise.reject(error.message);
   }
 }
 

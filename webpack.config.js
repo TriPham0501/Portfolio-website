@@ -109,7 +109,7 @@ module.exports = (env) => {
             process.env.NODE_ENV !== "production"
               ? "style-loader"
               : MiniCssExtractPlugin.loader,
-            "css-loader",
+            { loader: "css-loader", options: { url: false } },
             "sass-loader",
           ],
         },

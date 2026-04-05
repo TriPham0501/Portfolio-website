@@ -50,7 +50,7 @@ class HomePage extends BasePage<Props, States> {
         <div id="main">
           <HeadDownloadSection />
 
-          <div className="slider relative bg-night-street bg-cover bg-center bg-no-repeat">
+          <div className="slider relative bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/assets/images/dark-theme.jpg')" }}>
             <IntroSection />
             <AboutSection />
           </div>

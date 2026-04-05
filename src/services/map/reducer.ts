@@ -1,10 +1,10 @@
 import { MapActionType, AuthActionType } from '../../actions/action-types';
-import { MapAction } from '../../actions';
+import { MapAction } from '../map/EAction';
 import LayerInfo from '../../models/LayerInfo';
 
 export type Model = {
   layerInfos?: LayerInfo[],
-  view?: __esri.MapView | __esri.SceneView,
+  // view?: __esri.MapView | __esri.SceneView,
 };
 
 export const defaultState: Model = {
@@ -17,8 +17,8 @@ function reducer(state: Model = defaultState, action: MapAction): Model {
       return state;
     case MapActionType.LAYERINFO_SUCESS:
       return { ...state, layerInfos: action.layerInfos };
-    case MapActionType.VIEW_INIT:
-      return { ...state, view: action.view };
+    // case MapActionType.VIEW_INIT:
+      // return { ...state, view: action.view };
     case AuthActionType.LOGOUT as any:
       return defaultState;
     default:

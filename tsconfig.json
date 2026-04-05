@@ -17,7 +17,12 @@
       "es2018",
       "dom"
     ],
-    "outDir": "./dist/"
+    "outDir": "./dist/",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "strictNullChecks": false,
+    "noImplicitReturns": false,
+    "noImplicitAny": false
   },
   "types": [
     "arcgis-js-api",

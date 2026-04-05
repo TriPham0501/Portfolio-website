@@ -7,7 +7,7 @@ export let CONFIG = {
   titleSub: "",
   backgroundUrl: "",
   logoUrl: "",
-  webLinks: [],
+  webLinks: [] as string[],
   primaryColor: "",
   secondaryColor: "",
   excelService: "http://excelapi.ditagis.com",

@@ -17,14 +17,14 @@ import createRootReducer, { initialState } from "./reducers/main.reducer";
 
 // App
 import * as moment from "moment/moment";
-import { CONFIG } from "./appconfig";
+// import { CONFIG } from "./appconfig";
 
-import { RootId } from "./constants/app.constant";
-import { mapConfig } from "./constants/map.constant";
+// import { RootId } from "./constants/app.constant";
+// import { mapConfig } from "./constants/map.constant";
 import "./css/tailwind.css";
 import "./css/index.scss";
-import routes, { Route } from "./modules/routers";
-import authService from "./services/api/AuthServices";
+// import routes, { Route } from "./modules/routers";
+// import authService from "./services/api/AuthServices";
 
 moment.locale("vi");
 // LOGGING
@@ -79,42 +79,42 @@ moment.locale("vi");
       },
     },
     typography: {
-      useNextVariants: true,
+      // useNextVariants: true,
     },
-    overrides: {
-      MuiMenuItem: {
-        root: {
-          fontSize: 14,
-        },
-      },
-      MuiTab: {
-        root: {
-          minWidth: "unset",
-        },
-      },
-      MuiCardContent: {
-        root: {
-          padding: "0 16px",
-        },
-      },
-      MuiInputLabel: {
-        root: {
-          fontSize: 12,
-          overflow: "hidden",
-          textOverflow: "ellipsis",
-          display: "-webkit-box",
-          "-webkit-line-clamp": 1,
-          "-webkit-box-orient": "vertical",
-        },
-      },
-    },
+    // overrides: {
+    //   MuiMenuItem: {
+    //     root: {
+    //       fontSize: 14,
+    //     },
+    //   },
+    //   MuiTab: {
+    //     root: {
+    //       minWidth: "unset",
+    //     },
+    //   },
+    //   MuiCardContent: {
+    //     root: {
+    //       padding: "0 16px",
+    //     },
+    //   },
+    //   MuiInputLabel: {
+    //     root: {
+    //       fontSize: 12,
+    //       overflow: "hidden",
+    //       textOverflow: "ellipsis",
+    //       display: "-webkit-box",
+    //       "-webkit-line-clamp": 1,
+    //       "-webkit-box-orient": "vertical",
+    //     },
+    //   },
+    // },
   });
 
   // REDUX
 
   const middleWares = [thunkMiddleware];
 
-  process.env.NODE_ENV !== "production" && middleWares.push(loggerMiddleware);
+  // process.env.NODE_ENV !== "production" && middleWares.push(loggerMiddleware);
 
   const store = createStore(
     createRootReducer(),

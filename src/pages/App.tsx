@@ -84,8 +84,7 @@ class AppPage extends React.PureComponent<Props, State> {
     >
       {alert.type &&
         <SnackbarContent
-          onClose={this.handleClose}
-          variant={alert.type || 'info'}
+          // onClose={this.handleClose}
           message={alert.message}
         />
       }

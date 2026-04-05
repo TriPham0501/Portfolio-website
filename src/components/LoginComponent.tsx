@@ -1,5 +1,5 @@
 import * as React from "react";
-import User from "../services/user/model";
+import {User} from "../services/main/user/model";
 import {
   Card,
   TextField,

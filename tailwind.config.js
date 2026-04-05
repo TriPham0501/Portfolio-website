@@ -33,8 +33,8 @@ module.exports = {
         facebook: "#4267b2",
       },
       backgroundImage: {
-        "night-street": "url('/assets/images/dark-theme.jpg')",
-        "snow-falling": "url('/assets/FluidCheapGibbon.gif')",
+        // "night-street": "url('static/assets/images/dark-theme.jpg')",
+        // "snow-falling": "url('static/assets/FluidCheapGibbon.gif')",
       },
       margin: {
         "15%": "15%",

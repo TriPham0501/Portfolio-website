@@ -51,6 +51,7 @@ export const updatePassword = (
     authService
       .updatePassword(currentPassword, newPassword)
       .then((user) => {
+        if (user){}
         dispatch(loading.loadingFinish());
         dispatch(alertActions.success('Đã đổi mật khẩu thành công'));
         window.location.assign('/logout');

@@ -1,4 +1,4 @@
-import * as React from 'react';
+// import * as React from 'react';
 import BaseComponent, { BaseProps } from '../components/BaseComponent';
 import authService from '../services/api/AuthServices';
 import { ApplicationInfo } from '../services/map/models/Application';

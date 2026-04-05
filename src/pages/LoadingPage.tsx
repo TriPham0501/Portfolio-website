@@ -4,7 +4,7 @@ import { Typography, CircularProgress } from '@mui/material';
 import routes from '../modules/routers';
 import { withRouter, RouteComponentProps } from 'react-router';
 import { CONFIG } from '../appconfig';
-const styles: StyleRulesCallback = (theme) => ({
+const styles: StyleRulesCallback<any, any, 'root' | 'logoTitle' | 'progress' | 'logoDesignBy'> = (theme) => ({
   root: {
     background: `url('${CONFIG.backgroundUrl}') no-repeat center center fixed`,
     '-webkit-background-size': 'cover',

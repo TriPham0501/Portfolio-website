@@ -108,7 +108,8 @@ const ConnectionSection: React.FC = () => {
   return (
     <div
       id="contact"
-      className="overflow-hidden bg-night-street bg-cover bg-center bg-no-repeat py-20"
+      className="overflow-hidden bg-cover bg-center bg-no-repeat py-20"
+      style={{ backgroundImage: "url('/assets/images/dark-theme.jpg')" }}
     >
       <div className="mx-auto max-w-6xl px-4">
         <p className="text-center text-lg text-gray-400">MY NETWORK</p>
