@@ -34,7 +34,7 @@ const PageBanner = () => {
   const [mobileHomeOpen, setMobileHomeOpen] = useState(false);
 
   const options = [
-    ["Home", "/home"],
+    ["Home", "./"],
     ["Journey", "#about"],
     ["Achievements", "#games"],
     ["Projects", "/projects"],

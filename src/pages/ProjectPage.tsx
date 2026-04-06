@@ -271,7 +271,7 @@ const ProjectPage: React.FC<{ id?: string }> = () => {
             {/* Back to home */}
             <div className="mt-16 flex justify-center">
               <a
-                href="/home"
+                href="/"
                 className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-8 py-3 text-sm uppercase tracking-widest text-white backdrop-blur-sm transition-all duration-200 hover:bg-white/20 hover:border-white/60"
               >
                 <svg viewBox="0 0 20 20" fill="currentColor" width={16} height={16}>

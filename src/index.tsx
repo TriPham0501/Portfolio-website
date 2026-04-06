@@ -126,7 +126,7 @@ moment.locale("vi");
   const root = createRoot(document.querySelector("#root")!);
   root.render(
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <ThemeProvider theme={theme}>
           <AppPage />
         </ThemeProvider>

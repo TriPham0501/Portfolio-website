@@ -37,7 +37,8 @@ const routes: Array<Route> = [
   // },
   {
     id: APPLICATION.Home, name: 'Home', component: HomePage,
-    props: { path: '/home' },
+    // props: { path: '/home' },
+    props: { exact: true, path: '/' },
     avatar: '/images/icons/tnsc.png', isPrivate:true
   },
   {

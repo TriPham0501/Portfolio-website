@@ -133,9 +133,9 @@ class AppPage extends React.PureComponent<Props, State> {
                   )
               )}
             />
-            <Route exact path="/" render={_ => (
+            {/* <Route exact path="/" render={_ => (
               <Redirect to="/home" />
-            )} />
+            )} /> */}
             <Route path="/logout" component={LogoutFunction} />
             <Route path="/notaccess" component={NotAccess} />
             <Route path="/doi-mat-khau" component={ChangePasswordPage} />
