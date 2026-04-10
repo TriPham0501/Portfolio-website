@@ -22,7 +22,7 @@ const TechnologySection: React.FC = () => {
     <div
       id="missions"
       className="relative min-h-screen bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/assets/images/wp3.jpg')" }}
+      style={{ backgroundImage: `url('${process.env.PUBLIC_URL}/assets/images/wp3.jpg')` }}
     >
       <div className="absolute inset-0 bg-black/60" />
       <div
@@ -95,13 +95,13 @@ const TechnologySection: React.FC = () => {
                           <Tooltip
                             key={tech.label}
                             content={tech.label}
-                            imageUrl={tech.img}
+                            imageUrl={`${process.env.PUBLIC_URL}${tech.img}`}
                             className="h-24 w-24 sm:h-28 sm:w-28"
                             contentClassName="rounded-md bg-black/80 px-3 py-1.5 text-sm font-semibold text-white"
                           >
                             <div className="flex h-full w-full items-center justify-center">
                               {tech.img ? (
-                                <img src={tech.img} alt={tech.label} className="relative z-[1] h-1/2 w-1/2 object-contain" />
+                                <img src={`${process.env.PUBLIC_URL}${tech.img}`} alt={tech.label} className="relative z-[1] h-1/2 w-1/2 object-contain" />
                               ) : (
                                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white font-semibold">
                                   {tech.short}

@@ -22,7 +22,7 @@ const IntroSection: React.FC = () => {
                 className="relative flex flex-1 flex-col items-center justify-center rounded-xl border border-white/15 bg-white/15 py-4"
               >
                 <span className="absolute left-0 top-0 flex h-8 w-8 -translate-x-1/3 -translate-y-1/3 items-center justify-center rounded-full bg-gray-700 ring-white/30">
-                  <img src={icon} alt={label + ' icon'} className="h-4 w-4 object-contain" />
+                  <img src={`${process.env.PUBLIC_URL}${icon}`} alt={label + ' icon'} className="h-4 w-4 object-contain" />
                 </span>
                 <span className="text-2xl font-bold leading-tight text-golden">{value}</span>
                 <span className="mt-1 text-center text-sm leading-snug text-white/75">{label}</span>
@@ -34,7 +34,7 @@ const IntroSection: React.FC = () => {
         <div className="hidden h-full items-center justify-center md:flex">
           <GlowCard
             title={homeProfileCard.title}
-            imageUrl={homeProfileCard.imageUrl}
+            imageUrl={`${process.env.PUBLIC_URL}${homeProfileCard.imageUrl}`}
             imageAlt={homeProfileCard.imageAlt}
             className="h-full w-full max-w-[430px] opacity-100 transition-transform duration-300 hover:scale-[1.02] lg:max-w-[500px]"
           />

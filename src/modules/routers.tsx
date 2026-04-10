@@ -6,6 +6,7 @@ import { APPLICATION } from '../constants/app.constant';
 // const  TNSCPage = React.lazy(()=>import('../pages/TNSCPage'));
 const HomePage = React.lazy(() => import('../pages/HomePage/HomePage'));
 const ProjectPage = React.lazy(() => import('../pages/ProjectPage'));
+const AchievementPage = React.lazy(() => import('../pages/AchievementPage'));
 
 
 
@@ -43,7 +44,12 @@ const routes: Array<Route> = [
   },
   {
     id: 'projects', name: 'Projects', component: ProjectPage,
-    props: { path: '/projects' },
+    props: { path: '/Portfolio-website/projects' },
+    isPrivate: false
+  },
+  {
+    id: 'achievements', name: 'Achievements', component: AchievementPage,
+    props: { path: '/Portfolio-website/achievements' },
     isPrivate: false
   }
 

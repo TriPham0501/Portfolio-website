@@ -1,6 +1,8 @@
 //React
 import * as React from 'react';
 import { Route, Redirect, Switch, withRouter, RouteComponentProps, Link } from 'react-router-dom';
+// import { Redirect, Switch, withRouter, RouteComponentProps, Link } from 'react-router-dom';
+// import { HashRouter as Route } from 'react-router-dom';
 
 //Component
 import LoginPage from './LoginPage';
@@ -11,6 +13,8 @@ import NotFound from './NotFound';
 import MenuPage from './MenuPage';
 import NotAccess from './NotAccess';
 import LogoutFunction from './LogoutFunction';
+import Home from './HomePage/HomePage';
+import Projects from './ProjectPage';
 import PrivateComponent from '../components/PrivateComponent';;
 import {
   // LinearProgress
@@ -26,6 +30,7 @@ import { connect } from 'react-redux';
 import { AllModelReducer } from '../reducers/main.reducer';
 import { alertActions } from '../services/main/action';
 import { Alert } from '../services/main/model';
+import AchievementPage from './AchievementPage';
 //Module
 
 const styles = () => createStyles({
@@ -140,7 +145,9 @@ class AppPage extends React.PureComponent<Props, State> {
             <Route path="/notaccess" component={NotAccess} />
             <Route path="/doi-mat-khau" component={ChangePasswordPage} />
             <Route component={NotFound} />
-           
+           <Route path="/" element={<Home id="home" />} />
+           <Route path="/Portfolio-website/projects" element={<Projects id="projects" />} />
+           <Route path="/Portfolio-website/achievements" element={<AchievementPage  />} />
           </Switch>
         </React.Suspense>
       </div>

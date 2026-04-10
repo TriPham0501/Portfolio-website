@@ -18,10 +18,10 @@ const AboutSection: React.FC = () => {
       </div>
 
       <div className="mt-6 grid grid-cols-2 gap-6 sm:mt-8 md:mt-10 lg:mt-12">
-        <ImageStack className="w-3/4" imageUrl="/assets/images/man-looking-at-pcb.jpg" />
-        <ImageStack className="w-3/4" imageUrl="/assets/images/capabilities-pcb.jpg" />
-        {/* <ImageStack className="w-full" imageUrl="/assets/images/3.jpg" />
-        <ImageStack className="w-full" imageUrl="/assets/images/4.jpg" /> */}
+        <ImageStack className="w-3/4" imageUrl={`${process.env.PUBLIC_URL}/assets/images/man-looking-at-pcb.jpg`} />
+        <ImageStack className="w-3/4" imageUrl={`${process.env.PUBLIC_URL}/assets/images/capabilities-pcb.jpg`} />
+        {/* <ImageStack className="w-full" imageUrl={`${process.env.PUBLIC_URL}/assets/images/3.jpg`} />
+        <ImageStack className="w-full" imageUrl={`${process.env.PUBLIC_URL}/assets/images/4.jpg`} /> */}
       </div>
 
       <div id="languages" className="mt-12 sm:mt-12 md:mt-14">

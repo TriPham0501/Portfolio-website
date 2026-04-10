@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import { FlyoutLink } from "../material-ui/DropdownList";
+import { Link } from "react-router-dom";
 
 const homeSubOptions = [
   ['Intro', '#home'],
@@ -34,10 +35,10 @@ const PageBanner = () => {
   const [mobileHomeOpen, setMobileHomeOpen] = useState(false);
 
   const options = [
-    ["Home", "./"],
+    ["Home", "/Portfolio-website"],
     ["Journey", "#about"],
-    ["Achievements", "#games"],
-    ["Projects", "/projects"],
+    ["Achievements", "/Portfolio-website/achievements"],
+    ["Projects", "/Portfolio-website/projects"],
     ["Relationships", "#contact"],
   ];
 
@@ -128,12 +129,21 @@ const PageBanner = () => {
                 </li>
               ) : (
                 <li key={option[0]}>
-                  <a
-                    className="text-white hover:text-black hover:bg-webtheme rounded-3xl px-5 py-3 hover:ease-in-out hover:duration-200"
-                    href={option[1]}
-                  >
-                    {option[0]}
-                  </a>
+                  {option[1].startsWith('#') ? (
+                    <a
+                      className="text-white hover:text-black hover:bg-webtheme rounded-3xl px-5 py-3 hover:ease-in-out hover:duration-200"
+                      href={option[1]}
+                    >
+                      {option[0]}
+                    </a>
+                  ) : (
+                    <Link
+                      className="text-white hover:text-black hover:bg-webtheme rounded-3xl px-5 py-3 hover:ease-in-out hover:duration-200"
+                      to={option[1]}
+                    >
+                      {option[0]}
+                    </Link>
+                  )}
                 </li>
               )
             )}
@@ -197,13 +207,13 @@ const PageBanner = () => {
                   </div>
                 </div>
               ) : (
-                <a
+                <Link
                   key={option[0]}
-                  href={option[1]}
+                  to={option[1]}
                   className="block px-5 py-3 text-sm text-white hover:bg-webtheme hover:text-black transition-colors duration-200"
                 >
                   {option[0]}
-                </a>
+                </Link>
               )
             )}
           </div>

@@ -1,6 +1,7 @@
 import * as React from 'react';
 const { useState, useMemo } = React;
 import { projectActivityData } from '../mock-datas/projects.data';
+import { Link } from 'react-router-dom';
 
 // ── helpers ───────────────────────────────────────────────────────────────────
 
@@ -108,7 +109,7 @@ const ProjectSection: React.FC = () => {
     <section
       id="projects"
       className="relative flex flex-col justify-center py-20 text-white bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/assets/images/wp2.jpg')", minHeight: '100vh' }}
+      style={{ backgroundImage: `url('${process.env.PUBLIC_URL}/assets/images/wp2.jpg')`, minHeight: '100vh' }}
     >
       <div className="absolute inset-0 bg-black/65" />
 
@@ -224,15 +225,15 @@ const ProjectSection: React.FC = () => {
 
       {/* CTA button */}
       <div className="relative z-[1] mt-10 flex justify-center">
-        <a
-          href="/projects"
+        <Link
+          to="/Portfolio-website/projects"
           className="inline-flex items-center gap-3 rounded-full border border-blue-400/50 bg-blue-500/15 px-10 py-3.5 text-sm uppercase tracking-widest text-white backdrop-blur-sm transition-all duration-200 hover:bg-blue-500/30 hover:border-blue-300 hover:shadow-[0_0_24px_rgba(99,179,237,0.35)]"
         >
           View All Projects
           <svg viewBox="0 0 20 20" fill="currentColor" width={16} height={16}>
             <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
           </svg>
-        </a>
+        </Link>
       </div>
 
       {/* Tooltip portal */}

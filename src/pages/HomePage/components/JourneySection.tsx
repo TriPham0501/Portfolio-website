@@ -48,7 +48,7 @@ const JourneySection: React.FC = () => {
       <section
         id="journey"
         className="relative py-12 text-white bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('${bgImage}')` }}
+        style={{ backgroundImage: `url('${process.env.PUBLIC_URL}${bgImage}')` }}
       >
         <div className="absolute inset-0 bg-black/60" />
 
@@ -64,7 +64,7 @@ const JourneySection: React.FC = () => {
         {/* Portrait image */}
         <div className="relative z-[1] flex justify-center mb-8">
           <div className="w-44 rounded-xl overflow-hidden shadow-lg">
-            <img src={heroImage} alt={heroAlt} className="w-full h-auto object-cover" />
+            <img src={`${process.env.PUBLIC_URL}${heroImage}`} alt={heroAlt} className="w-full h-auto object-cover" />
           </div>
         </div>
 

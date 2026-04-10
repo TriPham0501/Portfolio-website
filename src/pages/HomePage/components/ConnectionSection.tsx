@@ -48,7 +48,7 @@ const GraphNode: React.FC<{ node: NetworkNode }> = ({ node }) => {
         }}
       >
         {node.avatarUrl ? (
-          <img src={node.avatarUrl} alt={node.name} className="h-full w-full object-cover" />
+          <img src={`${process.env.PUBLIC_URL}${node.avatarUrl}`} alt={node.name} className="h-full w-full object-cover" />
         ) : (
           <PersonIcon color={node.color} size={px} />
         )}
@@ -109,7 +109,7 @@ const ConnectionSection: React.FC = () => {
     <div
       id="contact"
       className="overflow-hidden bg-cover bg-center bg-no-repeat py-20"
-      style={{ backgroundImage: "url('/assets/images/dark-theme.jpg')" }}
+      style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/dark-theme.jpg)` }}
     >
       <div className="mx-auto max-w-6xl px-4">
         <p className="text-center text-lg text-gray-400">MY NETWORK</p>

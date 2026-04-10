@@ -10,27 +10,18 @@
   <meta name="theme-color" content="rgb(0, 188, 212)">
   <title>OBIRADUST</title>
   <script>
-    // GitHub Pages SPA restore: decode the ?p= path injected by 404.html
-    // and push the real URL into history before React boots.
-    (function () {
-      var search = location.search;
-      if (search) {
-        var params = search.slice(1).split('&').reduce(function (acc, s) {
-          var r = s.split('=');
-          acc[decodeURIComponent(r[0])] = r.slice(1).join('=').replace(/~and~/g, '&');
-          return acc;
-        }, {});
-        if (params.p !== undefined) {
-          // Reconstruct the full path: base (e.g. /Portfolio-website) + sub-path (e.g. /projects)
-          var basePath = location.pathname.replace(/\/$/, '');
-          var subPath = params.p.charAt(0) === '/' ? params.p : '/' + params.p;
-          var newPath = basePath + subPath +
-            (params.q ? '?' + params.q : '') +
-            location.hash;
-          history.replaceState(null, null, newPath);
-        }
-      }
-    })();
+    // GitHub Pages SPA redirect: encode the current path into a query param
+    // and redirect back to index.html so React Router can handle it.
+    // pathSegmentsToKeep=1 preserves the /Portfolio-website repo prefix.
+    var pathSegmentsToKeep = 1;
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.host +
+      l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?p=/' +
+      l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+      (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
   </script>
   <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/css/main.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">

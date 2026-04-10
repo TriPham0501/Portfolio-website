@@ -63,8 +63,8 @@ export const headScatterImages = [
 
 export const headDownloadContent = {
   heading: 'YOU ONLY LIVE ONCE',
-  title: 'Download Media Kit',
-  description: 'Grab our latest game showcase package in one click.',
-  downloadHref: '/assets/images/game intro/cs-wp.png',
+  title: 'Download My CV',
+  description: 'Have a look at my CV to see my experience and skills in more detail',
+  downloadHref: `${process.env.PUBLIC_URL}/assets/test.pdf`,
   downloadText: 'Download Now',
 };

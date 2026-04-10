@@ -16,7 +16,7 @@ const HeadDownloadSection: React.FC = () => {
           className={`absolute ${image.boxClass} z-10`}
         >
           <ImageHolder
-            imageUrl={image.src}
+            imageUrl={`${process.env.PUBLIC_URL}${image.src}`}
             caption={image.alt}
             rotation={parseFloat(image.rotate)}
             disableShine
